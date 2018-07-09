@@ -1,0 +1,423 @@
+body,html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+  background-color: #F3F3F3;
+  padding-bottom:200px;
+}
+
+*{
+  transition: all 0.3s;
+}
+
+.imageContainer{
+  overflow: hidden;
+}
+.imageContainer>img{
+  transition: all 0.5s;
+}
+.imageContainer>img:hover{
+  opacity: 0.5;
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+
+.hidden{
+	opacity: 0;
+}
+.hiddena{
+	display: none;
+}
+
+.animpage{
+	background-image: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+	
+  background: 
+  /* top, transparent red, faked with gradient */ 
+  linear-gradient(
+    rgba(0, 0, 0, 0.10), 
+    rgba(0, 0, 0, 0.10)
+  ),linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)
+  cornflowerblue;
+/*	background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%);
+*/
+/*background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+*/ 	height: 100%; 
+ 	background-attachment: fixed;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    
+
+}
+.iconHeadding{
+  color:#0069D9;
+}
+.iconHoverAnimation{
+  transition: all 0.3s;
+}
+.iconHoverAnimation:hover{
+  color:#0069D9;  
+  transform: scale(1.2);
+}
+/*JS Animation*/
+.fly-in-text {
+                list-style: none;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                text-align: center;
+                /* transform: translateX(-50%) translateY(-50%);  */
+                /*tranform translateX -50% statement makes the object place it in centre of the screen*/
+            }
+            .fly-in-text li {
+                display: inline-block;
+                /* margin-right: 5px; */
+                /*font-family: Open Sans, Arial;*/
+                /*font-family: 'Orienta', sans-serif;*/
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 50px;
+                color:white;
+            }
+/*Animation ENd*/
+
+
+.button{
+
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color:  transparent;
+  border: none;
+  font-size: 20px;
+  height: 60px;
+  width: 180px;
+  color: black;
+  border-color: white;
+  /*transition: all 0.3s;*/
+}
+.myWorkButton{
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border:solid 2px;
+    border-radius: 10px;  
+    color: white;
+  font-size: 20px;
+  height: 60px;
+  width: 180px;
+  color: black;
+  transition: 0.3s all;
+  /*border-color: white;*/
+}
+.myWorkButton:hover{
+  /*border: solid 3px;*/
+  transition: all 0.3s;
+  background-color: linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(0, 0, 0, 0.45)
+  );
+  background-color: transparent;
+  border:solid 2px;
+    border-radius: 10px;  
+    color: white;
+  border-color: black;
+  cursor: pointer;
+  /*color: white;*/
+}
+.button:hover{
+	/*border: solid 3px;*/
+  transition: all 0.3s;
+  background-color: linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(0, 0, 0, 0.45)
+  );
+	background-color: transparent;
+	border:solid 2px;
+  	border-radius: 20px;	
+  	color: white;
+	border-color: black;
+  cursor: pointer;
+	/*color: white;*/
+}
+
+
+.homescreen{
+/*	background-image: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+*/	background-image: linear-gradient(
+    rgba(0, 0, 0, 0.45), 
+    rgba(0, 0, 0, 0.45)
+  ), url("https://images.unsplash.com/photo-1504164996022-09080787b6b3?auto=format&fit=crop&w=1500&q=80");
+    height: 100%; 
+    width: 100%;
+ 	  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+
+
+.splitDot .dot.bw { 
+    background: lightgrey;
+}
+
+/*Dot wrapper*/
+.splitDot {
+    margin: auto;
+    display: table;
+    text-align: center;   
+    /*Above three lines makes the div content centered in page IMPORTANT */
+}
+.splitDot .dot.color1 {
+    background: #C8544F;
+}
+/* each dot designs*/
+.splitDot .dot {   
+    height: 1.5em;
+    width: 1.5em;
+    float: left;
+    display: block;
+    border-radius: 1000px;
+    margin: 2.5em 1em;
+}
+/*Nav BAR*/
+div.pullDown a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0px;
+    top: -2px;
+    content: '';
+    background: white;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+/*this class comes in actin when hovering , makes the pulldown drop*/
+div.pullDown a:hover:before
+{   
+    height: 100%;
+}
+div.navbarContainer  /* Sets the height, alignment for NAV Bar*/
+{
+  /*padding bottom adjusts the height*/
+  /*padding 1em top 3em right */
+  /*margin: 10 auto;*/
+  padding: 1em 3em;	
+  padding-bottom: 12px; 
+  text-align: center;
+  background: rgba(53, 55, 61, 0.55);
+  transition: all 1s;
+}
+
+div.navbarContainer a 
+{
+    color: #FFF;
+  	font-family: 'Josefin Sans', sans-serif;
+    margin: 0px 10px;
+    padding: 13px ;
+    position: relative;
+    font-size: 23px;
+    transition: all 1s;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media (max-width: 675px) {
+  div.navbarContainer a {
+    clear:both;
+    color: white;
+    margin: auto;
+    transition: all 1s;
+    display: block;
+    
+  }
+}
+@media (max-width: 675px) {
+  div.navbarContainer  {
+    clear:both;
+    color: white;
+    margin: auto;
+    width: 60%;
+    transition: all 1s;
+    display: block;
+    
+  }
+}
+.lightGreen
+{
+    background: #8bc34a;
+}
+
+
+.intro{
+  width: 100%;
+  height: 100%;
+  transform: translateY(30%);
+	/*margin-top: 45%; */
+	text-align: center;
+	font-size: 26px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+    /*margin-left: 20px;*/
+  color: white ;
+}
+.readMoreButton{
+  transition: all 0.3s;
+}
+.readMoreButton:hover{
+  transform: scale(1.2); 
+}
+.myWorkSection{
+	 /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+	  /* background-image: url("bg8.jpg"); */
+    background-color: #F3F3F3;
+    /*height: 100%; */
+ 	  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+}
+/*Row sets margin rules and displays all the boxes centre in web*/
+
+.cardDetail{
+    padding-top: 260px;
+  }
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*Overlay is the content tht appears when hovering over the box */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+.containerd {
+  position: relative;
+  float: left;
+  margin-top: 1px;    
+}
+
+.containerd:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+.text{
+  padding: 50px;
+  font-size: 20px;
+}
+
+.flip{
+  margin: 30px;
+  background-color: blue;
+  width:200px;
+  height: 200px;  
+  transition: 0.5s;
+}
+
+.flip:hover{
+  transform: rotateY(180deg);
+  background-color: red;
+}
+
+/* The Modal (background) */
+
+
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+/*.aa > img {
+  border:1px solid black;
+  transition: all 0.2s ;
+}
+.aa > img:hover {
+  border:3px solid black;
+  transition: all 0.2s ;
+}
+*/
+/*.contactmeimagesection{
+  padding-top: 25px;
+  margin: auto;
+}*/
+.contactMeContainer{
+
+}
+/*@media (max-width: 814px) {
+  .contactMeContainer {
+    clear:both;
+    margin: auto;
+    width:100%;
+    display: block;
+    margin-top: 10px;
+  }  
+}*/
+
+.zoom{transition: all 0.3s;}
+.zoom:hover{-webkit-transform: scale(1.2);transform: scale(1.2);  text-shadow: 1px 1px 3px #272634;}
+
+footer {
+  z-index:1;
+}
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
