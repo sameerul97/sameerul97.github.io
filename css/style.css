@@ -59,8 +59,8 @@ body,html{
   transition: all 0.3s;
 }
 .iconHoverAnimation:hover{
-  color:#0069D9;  
-  transform: scale(1.2);
+  /* color:#0069D9;   */
+  transform: scale(1.3);
 }
 /*JS Animation*/
 .fly-in-text {
