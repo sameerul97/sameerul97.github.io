@@ -9,7 +9,10 @@ body,html{
 *{
   transition: all 0.3s;
 }
-
+.text-info {
+  color: #17a2b8;
+  font-weight: 700;
+}
 .imageContainer{
   overflow: hidden;
 }
