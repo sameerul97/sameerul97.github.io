@@ -15,9 +15,14 @@ body,html{
 }
 .imageContainer{
   overflow: hidden;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  border-radius: 0.45rem;
+  transition: all 0.3s;
 }
 .imageContainer>img{
   transition: all 0.5s;
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
 }
 .imageContainer>img:hover{
   opacity: 0.5;
