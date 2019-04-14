@@ -24,6 +24,8 @@
   <!-- SLICK CSS -->
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/crossDiv.css" />
+  <script src="js/crossMyDiv.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Orienta" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
@@ -48,10 +50,13 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background:
-        /* top, transparent red, faked with gradient */
-        linear-gradient(rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)), linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%) cornflowerblue;
+      background: #24C6DC;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #514A9D, #24C6DC);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
     }
 
@@ -109,32 +114,50 @@
     <!-- <button id="p1" input="" type="button" class=" hiddena button" style="display: inline-block; border: 2px solid black; border-radius: 10px;">Introduction</button> -->
     <!-- <canvas class="particles-js-canvas-el" width="340" height="586" style="width: 100%; height: 100%;"></canvas> -->
   </div>
-  <div id="homescreen" class="homescreen">
-    <div class="navbarContainer lightGreen pullDown">
-      <a href="#!">Home</a>
-      <a href="#!" class="goToWorkSection">My Work</a>
-      <a href="/resume/index.html">Resume</a>
-      <!-- <a>About</a> -->
-      <a href="#!" id="contactme">Contact</a>
+  <nav id="navbar" class="navbar navbar-dark navbar-expand-lg navbar-dark bg-light shadow-lg sticky-top"
+    data-toggle="affix">
+    <a class="navbar-brand font-italic font-weight-bold" href="#">Sameer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
     </div>
-    <div class="container" style="">
-      <div class="intro">
-        <div data-aos="slide-up" data-aos-delay="300" class="aos-init aos-animate">
-          <h1>Welcome!</h1>
-        </div>
-        <br>
-        <div data-aos="slide-down" data-aos-delay="350" class="aos-init aos-animate">
-          <h3>I'm Sameerul</h3>
-          <p>Young student interested in coding and few other things</p>
+  </nav>
+  <div class="slantedBottomRight">
+    <div id="homescreen" class="">
+
+      <!-- <div class="navbarContainer lightGreen pullDown">
+        <a href="#!">Home</a>
+        <a href="#!" class="goToWorkSection">My Work</a>
+        <a href="/resume/index.html">Resume</a>
+        <a href="#!" id="contactme">Contact</a>
+      </div> -->
+      <div class="container" style="">
+        <div class="intro">
+          <div data-aos="slide-up" data-aos-delay="300" class="aos-init aos-animate">
+            <h1>Welcome!</h1>
+          </div>
           <br>
-          <br>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="550" class="aos-init aos-animate">
-          <button class="myWorkButton goToWorkSection">View my Work</button>
+          <div data-aos="slide-down" data-aos-delay="350" class="aos-init aos-animate">
+            <h3>I'm Sameerul</h3>
+            <p>Young student interested in coding and few other things</p>
+            <br>
+            <br>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="550" class="aos-init aos-animate">
+            <button class="myWorkButton goToWorkSection">View my Work</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 
   <!-- Dont really need split dont jus keep it for future  and go through how circle value works-->
   <!--           <div class="splitDot">
@@ -145,7 +168,7 @@
 
 
   <!-- My Work Section  -->
-  <section id="mywork">
+  <section id="mywork" >
 
     <!-- Worksection Title -->
     <div class="p-3">
@@ -159,7 +182,7 @@
     </div>
     <!-- Worksection title END -->
     <!-- Projects Section -->
-    <div class="container">
+    <div class="container" >
       <div style="margin:10px;">
         <!-- Work CARD -->
         <div class="row">
@@ -179,12 +202,16 @@
                 </div>
                 <!--Text-->
                 <div style="text-align: center">
-                  <button type="button" class="m-2 hvr-sweep-to-right btn btn-secondary font-weight-light"
+                  <p>
+<button type="button" class="m-2 hvr-sweep-to-right btn btn-secondary font-weight-light"
                     data-toggle="modal" data-target="#webDevelopmentModal">View More
                     <span>
                       <i class="fas fa-info"></i>
                     </span>
                   </button>
+                    
+                  </p>
+                  
                 </div>
               </div>
             </div>
@@ -1110,6 +1137,55 @@
   </footer>
 
   <script src="./index_files/jquery.min.js.download"></script>
+  <script>
+    var sun = document.querySelector('.sun');
+    var $sun = $(".navbar-brand");
+    var $win = $(window);
+
+    var header = document.getElementById("navbar");
+    var sticky = header.offsetTop;
+
+    $win.on("scroll", function () {
+
+    });
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if (window.pageYOffset > sticky) {
+          $('.navbar').css('padding', "0.5rem 1rem");
+          $('.navbar-brand').text("S");
+          var top = $win.scrollTop() / 3;
+          $sun.css("transform", "rotate(" + top + "deg");
+
+        } else {
+          $('.navbar').css('padding', "1.5rem");
+          $('.navbar-brand').text("Sameer");
+          var top = $win.scrollTop() / 3;
+          $sun.css("transform", "rotateY(" + 0 + "deg");
+
+        }
+      });
+    });
+  </script>
+  <script>
+    window.onscroll = function () {
+      myFunction()
+    };
+
+    var header = document.getElementById("navbar");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky ) {
+        header.classList.remove("sticky-top");
+        header.classList.add("fixed-top");
+      } else {
+        header.classList.remove("fixed-top");
+        header.classList.add("sticky-top");
+
+      }
+    }
+  </script>
+
   <script type="text/javascript">
     $(function () {
       setTimeout(function () {
@@ -1126,7 +1202,7 @@
   <script type="text/javascript">
     $("#p1").click(function () {
       $('html,body').animate({
-          scrollTop: $("#homescreen").offset().top
+          scrollTop: $("#navbar").offset().top
         },
         'slow');
     });
@@ -1141,6 +1217,9 @@
   </script>
   <script type="text/javascript">
     $(".goToWorkSection").click(function () {
+      $('#navbar').height();
+      console.log($('#navbar').height())
+      $('#mywork').css('padding-top', document.getElementById('navbar').clientHeight+"px");
       $('html,body').animate({
           scrollTop: $("#mywork").offset().top
         },

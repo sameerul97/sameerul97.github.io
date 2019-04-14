@@ -7,10 +7,6 @@ html {
   padding-bottom: 200px;
 }
 
-* {
-  transition: all 0.3s;
-}
-
 .text-info {
   color: #17a2b8;
   font-weight: 700;
@@ -46,11 +42,7 @@ html {
 }
 
 .animpage {
-  background-image: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
 
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.10),
-    rgba(0, 0, 0, 0.10)), linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%) cornflowerblue;
   height: 100%;
   background-attachment: fixed;
   /* Center and scale the image nicely */
@@ -204,8 +196,19 @@ html {
 
 
 }
+.nav {
+  color: white;
+}
 
+.navbar {
+  padding: 1.5rem;
+  background-color: #0072BC !important;
+  transition: all 0.2s;
+}
 
+.navbar-brand {
+  font-size: 1.5rem;
+}
 
 .splitDot .dot.bw {
   background: lightgrey;
@@ -243,7 +246,6 @@ div.pullDown a:before {
   content: '';
   background: white;
   opacity: 0.5;
-  transition: all 0.3s;
 }
 
 /*this class comes in actin when hovering , makes the pulldown drop*/
@@ -262,7 +264,6 @@ div.navbarContainer
   padding-bottom: 12px;
   text-align: center;
   background: rgba(53, 55, 61, 0.55);
-  transition: all 1s;
 }
 
 div.navbarContainer a {
@@ -272,7 +273,6 @@ div.navbarContainer a {
   padding: 13px;
   position: relative;
   font-size: 23px;
-  transition: all 1s;
   text-decoration: none;
   cursor: pointer;
 }
